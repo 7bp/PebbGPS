@@ -15,14 +15,11 @@
 
 @interface NOViewController : UIViewController <MKMapViewDelegate> {
   __weak IBOutlet MKMapView *map;
-  __weak IBOutlet UIImageView *mirrorView32;
-  __weak IBOutlet UIImageView *mirrorView64;
-  __weak IBOutlet UIImageView *mirrorView128;
+  __weak IBOutlet UIImageView *mirrorView;
 }
 @property(nonatomic, retain) NOPebbleMessageQueue *message_queue;
-@property(assign) UIImageView *mirrorView;
 
 -(void)updateMapLocation:(CLLocation*)newLocation;
 -(void)createImage:(NSTimer*)theTimer;
-  
+
   @end

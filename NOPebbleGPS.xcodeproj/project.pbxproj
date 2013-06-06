@@ -26,11 +26,10 @@
 		C19DA6EC1758C01000CF6576 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C19DA6EB1758C01000CF6576 /* Default@2x.png */; };
 		C19DA6EE1758C01000CF6576 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C19DA6ED1758C01000CF6576 /* Default-568h@2x.png */; };
 		C19DA6F11758C01000CF6576 /* NOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C19DA6F01758C01000CF6576 /* NOViewController.m */; };
-		C19DA6F41758C01000CF6576 /* NOViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19DA6F21758C01000CF6576 /* NOViewController_iPhone.xib */; };
-		C19DA6F71758C01000CF6576 /* NOViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19DA6F51758C01000CF6576 /* NOViewController_iPad.xib */; };
 		C19DA6FF1758CA3600CF6576 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19DA6FD1758C18400CF6576 /* MapKit.framework */; };
 		C19DA7011758D1DF00CF6576 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19DA7001758D1DF00CF6576 /* QuartzCore.framework */; };
 		C1CBDF2F1758D360003E19B3 /* NOPebbleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CBDF2E1758D360003E19B3 /* NOPebbleImage.m */; };
+		E07D07CF1761459E00D791AC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07D07CE1761459E00D791AC /* MainStoryboard_iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,12 +58,11 @@
 		C19DA6ED1758C01000CF6576 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C19DA6EF1758C01000CF6576 /* NOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOViewController.h; sourceTree = "<group>"; };
 		C19DA6F01758C01000CF6576 /* NOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NOViewController.m; sourceTree = "<group>"; };
-		C19DA6F31758C01000CF6576 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NOViewController_iPhone.xib; sourceTree = "<group>"; };
-		C19DA6F61758C01000CF6576 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NOViewController_iPad.xib; sourceTree = "<group>"; };
 		C19DA6FD1758C18400CF6576 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C19DA7001758D1DF00CF6576 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C1CBDF2D1758D360003E19B3 /* NOPebbleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOPebbleImage.h; sourceTree = "<group>"; };
 		C1CBDF2E1758D360003E19B3 /* NOPebbleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOPebbleImage.m; sourceTree = "<group>"; };
+		E07D07CE1761459E00D791AC /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard_iPhone.storyboard; path = ../MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +133,7 @@
 				C19DA6E71758C01000CF6576 /* NOAppDelegate.m */,
 				C19DA6EF1758C01000CF6576 /* NOViewController.h */,
 				C19DA6F01758C01000CF6576 /* NOViewController.m */,
-				C19DA6F21758C01000CF6576 /* NOViewController_iPhone.xib */,
-				C19DA6F51758C01000CF6576 /* NOViewController_iPad.xib */,
+				E07D07CE1761459E00D791AC /* MainStoryboard_iPhone.storyboard */,
 				C1CBDF2D1758D360003E19B3 /* NOPebbleImage.h */,
 				C1CBDF2E1758D360003E19B3 /* NOPebbleImage.m */,
 				C1839842175960D000C35599 /* NOPebbleMessageQueue.h */,
@@ -216,8 +213,7 @@
 				C19DA6EA1758C01000CF6576 /* Default.png in Resources */,
 				C19DA6EC1758C01000CF6576 /* Default@2x.png in Resources */,
 				C19DA6EE1758C01000CF6576 /* Default-568h@2x.png in Resources */,
-				C19DA6F41758C01000CF6576 /* NOViewController_iPhone.xib in Resources */,
-				C19DA6F71758C01000CF6576 /* NOViewController_iPad.xib in Resources */,
+				E07D07CF1761459E00D791AC /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,22 +241,6 @@
 				C19DA6E11758C01000CF6576 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C19DA6F21758C01000CF6576 /* NOViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C19DA6F31758C01000CF6576 /* en */,
-			);
-			name = NOViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		C19DA6F51758C01000CF6576 /* NOViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C19DA6F61758C01000CF6576 /* en */,
-			);
-			name = NOViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

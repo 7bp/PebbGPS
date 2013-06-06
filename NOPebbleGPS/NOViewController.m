@@ -30,46 +30,11 @@
   
   map.transform = CGAffineTransformMakeScale(2.5f, 2.5f);
   
-  _mirrorView = mirrorView32;
-  
-	// Do any additional setup after loading the view, typically from a nib.
+  // Do any additional setup after loading the view, typically from a nib.
   map.delegate = self;
   map.showsUserLocation = YES;
   [self moveAnnotations];
   message_queue = [[NOPebbleMessageQueue alloc] init];
-  
-  UITapGestureRecognizer *tap32 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeMirrorSize32)];
-  tap32.numberOfTapsRequired = 1;
-  tap32.numberOfTouchesRequired = 1;
-  mirrorView32.userInteractionEnabled = YES;
-  [mirrorView32 addGestureRecognizer:tap32];
-  
-  UITapGestureRecognizer *tap64 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeMirrorSize64)];
-  tap64.numberOfTapsRequired = 1;
-  tap64.numberOfTouchesRequired = 1;
-  mirrorView64.userInteractionEnabled = YES;
-  [mirrorView64 addGestureRecognizer:tap64];
-  
-  UITapGestureRecognizer *tap128 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeMirrorSize128)];
-  tap128.numberOfTapsRequired = 1;
-  tap128.numberOfTouchesRequired = 1;
-  mirrorView128.userInteractionEnabled = YES;
-  [mirrorView128 addGestureRecognizer:tap128];
-}
-
--(void)changeMirrorSize32 {
-  _mirrorView = mirrorView32;
-  [self createImage:nil];
-}
-
--(void)changeMirrorSize64 {
-  _mirrorView = mirrorView64;
-  [self createImage:nil];
-}
-
--(void)changeMirrorSize128 {
-  _mirrorView = mirrorView128;
-  [self createImage:nil];
 }
 
 -(void)updateMapLocation:(CLLocation*)newLocation {
@@ -93,11 +58,10 @@
 -(void)createImage:(NSTimer*)theTimer{
   UIGraphicsBeginImageContextWithOptions(map.bounds.size, YES, 0.0);
   [map.layer renderInContext:UIGraphicsGetCurrentContext()];
-  _mirrorView.image = UIGraphicsGetImageFromCurrentImageContext();
+  mirrorView.image = UIGraphicsGetImageFromCurrentImageContext();
   
-
-  UIGraphicsBeginImageContextWithOptions(_mirrorView.bounds.size, YES, 0.0);
-  [_mirrorView.layer renderInContext:UIGraphicsGetCurrentContext()];
+  UIGraphicsBeginImageContextWithOptions(mirrorView.bounds.size, YES, 0.0);
+  [mirrorView.layer renderInContext:UIGraphicsGetCurrentContext()];
   UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
   UIGraphicsEndImageContext();
   
@@ -125,7 +89,6 @@
   }
   lView.frame = CGRectMake(200, 200, lView.frame.size.width, lView.frame.size.height);
 }
-
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
